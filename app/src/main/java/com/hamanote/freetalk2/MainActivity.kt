@@ -10,7 +10,7 @@ import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.Menu
 import android.view.MenuItem
-import com.hamanote.freetalk.fragment.FavoriteFragment
+import com.hamanote.freetalk.fragment.FriendFragment
 import com.hamanote.freetalk.fragment.HomeFragment
 import com.hamanote.freetalk.fragment.TalkFragment
 import com.hamanote.freetalk2.base.BaseActivity
@@ -38,7 +38,7 @@ class MainActivity : BaseActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         val appName = this.packageManager.getPackageInfo(this.packageName, 0).versionName
         adapter.addFragment(HomeFragment(), appName)
-        adapter.addFragment(FavoriteFragment(), "Friend")
+        adapter.addFragment(FriendFragment(), "Friend")
         adapter.addFragment(TalkFragment(), "Talk")
 
         container.adapter = adapter
@@ -50,10 +50,12 @@ class MainActivity : BaseActivity() {
         tabs.getTabAt(0)?.setIcon(R.drawable.ic_home_black_24dp)
         tabs.getTabAt(1)?.setIcon(R.drawable.ic_people_black_24dp)
         tabs.getTabAt(2)?.setIcon(R.drawable.ic_chat_black_24dp)
+        tabs.getTabAt(3)?.setIcon(R.drawable.ic_chat_black_24dp)
 
         tabs.getTabAt(0)?.setText("Home")
-        tabs.getTabAt(1)?.setText("Favorite")
+        tabs.getTabAt(1)?.setText("Friend")
         tabs.getTabAt(2)?.setText("Room")
+        tabs.getTabAt(3)?.setText("Setting")
 
         tabs.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabReselected(tab: TabLayout.Tab?) {
