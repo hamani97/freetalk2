@@ -12,6 +12,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.hamanote.freetalk.fragment.FriendFragment
 import com.hamanote.freetalk.fragment.HomeFragment
+import com.hamanote.freetalk.fragment.SettingFragment
 import com.hamanote.freetalk.fragment.TalkFragment
 import com.hamanote.freetalk2.base.BaseActivity
 import com.hamanote.freetalk2.base.BaseFragment
@@ -40,6 +41,7 @@ class MainActivity : BaseActivity() {
         adapter.addFragment(HomeFragment(), appName)
         adapter.addFragment(FriendFragment(), "Friend")
         adapter.addFragment(TalkFragment(), "Talk")
+        adapter.addFragment(SettingFragment(), "Setting")
 
         container.adapter = adapter
         adapter.notifyDataSetChanged()
@@ -50,11 +52,11 @@ class MainActivity : BaseActivity() {
         tabs.getTabAt(0)?.setIcon(R.drawable.ic_home_black_24dp)
         tabs.getTabAt(1)?.setIcon(R.drawable.ic_people_black_24dp)
         tabs.getTabAt(2)?.setIcon(R.drawable.ic_chat_black_24dp)
-        tabs.getTabAt(3)?.setIcon(R.drawable.ic_chat_black_24dp)
+        tabs.getTabAt(3)?.setIcon(R.drawable.ic_settings_black_24dp)
 
         tabs.getTabAt(0)?.setText("Home")
         tabs.getTabAt(1)?.setText("Friend")
-        tabs.getTabAt(2)?.setText("Room")
+        tabs.getTabAt(2)?.setText("Talk")
         tabs.getTabAt(3)?.setText("Setting")
 
         tabs.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
