@@ -5,4 +5,10 @@
     <color name="colorPrimary">#777777</color>
     <color name="colorPrimaryDark">#707070</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!--Custom colors-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlueSky">#499AD1</color>
+
+    <color name="colorTitle">#303030</color>
 </resources>
